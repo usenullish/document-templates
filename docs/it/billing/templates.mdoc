@@ -5,16 +5,16 @@ description: Fatture che ti somigliano, disegnate con l'IA o a mano.
 
 nullish ha già un modello predefinito, sobrio, in inglese, tedesco, francese e italiano. Se vuoi fatture che ti somiglino, disegnane uno tuo: la pagina è tutta tua, non solo un logo e una riga di testo.
 
-I modelli nascono nel progetto [nullish templates](https://github.com/usenullish/templates), che mostra la tua fattura in anteprima live con dati di esempio: ogni modifica la vedi subito. Il lavoro puoi lasciarlo all'IA o farlo tu.
+I modelli nascono nel progetto [nullish templates](https://github.com/usenullish/document-templates), che mostra la tua fattura in anteprima live con dati di esempio: ogni modifica la vedi subito. Il lavoro puoi lasciarlo all'IA o farlo tu.
 
 ## Scaricare il progetto
 
 {% steps %}
 
-1. Fai un fork di [usenullish/templates](https://github.com/usenullish/templates) su GitHub se vuoi tenere i modelli in un repository tuo, poi clonalo:
+1. Fai un fork di [usenullish/document-templates](https://github.com/usenullish/document-templates) su GitHub se vuoi tenere i modelli in un repository tuo, poi clonalo:
 
    ```sh
-   git clone https://github.com/usenullish/templates.git
+   git clone https://github.com/usenullish/document-templates.git
    cd templates
    npm install
    ```
@@ -44,7 +44,7 @@ Il modello di fattura sta in `src/templates/invoices/`:
 - `Invoice.astro` è il layout: cosa appare sulla pagina, e dove.
 - `i18n.json` contiene i testi in inglese, francese, tedesco e italiano.
 
-Lo stile lo definisci con CSS semplice o con le classi Tailwind. Le misure sono in millimetri, come sulla carta. Nel [README del progetto](https://github.com/usenullish/templates#readme) trovi tutti i dati della fattura e la sintassi dei modelli.
+Lo stile lo definisci con CSS semplice o con le classi Tailwind. Le misure sono in millimetri, come sulla carta. Nel [README del progetto](https://github.com/usenullish/document-templates#readme) trovi tutti i dati della fattura e la sintassi dei modelli.
 
 {% aside %}
 nullish salva solo l'HTML, quindi il modello non può caricare niente da fuori. Incorpora il logo

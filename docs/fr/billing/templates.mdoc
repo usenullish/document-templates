@@ -5,16 +5,16 @@ description: Des factures à ton image, mises en page par une IA ou à la main.
 
 nullish est livré avec un modèle par défaut tout simple, en anglais, allemand, français et italien. Tu veux des factures à ton image ? Crée ton propre modèle : toute la page est à toi, pas seulement un logo et une ligne de texte.
 
-Les modèles se font avec le projet [nullish templates](https://github.com/usenullish/templates). Il affiche un aperçu en direct de ta facture avec des données d'exemple : tu vois chaque changement tout de suite. Laisse une IA faire le travail, ou modifie le modèle toi-même.
+Les modèles se font avec le projet [nullish templates](https://github.com/usenullish/document-templates). Il affiche un aperçu en direct de ta facture avec des données d'exemple : tu vois chaque changement tout de suite. Laisse une IA faire le travail, ou modifie le modèle toi-même.
 
 ## Récupérer le projet
 
 {% steps %}
 
-1. Fais un fork de [usenullish/templates](https://github.com/usenullish/templates) sur GitHub si tu veux garder tes modèles dans ton propre dépôt, puis clone-le :
+1. Fais un fork de [usenullish/document-templates](https://github.com/usenullish/document-templates) sur GitHub si tu veux garder tes modèles dans ton propre dépôt, puis clone-le :
 
    ```sh
-   git clone https://github.com/usenullish/templates.git
+   git clone https://github.com/usenullish/document-templates.git
    cd templates
    npm install
    ```
@@ -44,7 +44,7 @@ Le modèle de facture se trouve dans `src/templates/invoices/` :
 - `Invoice.astro`, c'est la mise en page : ce qui figure sur la page, et où.
 - `i18n.json` contient les textes en anglais, français, allemand et italien.
 
-Habille-le avec du CSS tout simple ou des classes Tailwind. Les tailles sont en millimètres, comme sur papier. Le [README du projet](https://github.com/usenullish/templates#readme) liste toutes les données de la facture et la syntaxe des modèles.
+Habille-le avec du CSS tout simple ou des classes Tailwind. Les tailles sont en millimètres, comme sur papier. Le [README du projet](https://github.com/usenullish/document-templates#readme) liste toutes les données de la facture et la syntaxe des modèles.
 
 {% aside %}
 nullish ne stocke que le HTML : le modèle ne peut rien charger d'ailleurs. Intègre ton logo en SVG

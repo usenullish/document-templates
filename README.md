@@ -7,12 +7,12 @@ A template is a single HTML file. nullish fills it with the data of a document a
 ## Getting started
 
 > [!TIP]
-> To keep your updated templates in your own GitHub repository, [fork it](https://github.com/usenullish/templates/fork) first.
+> To keep your updated templates in your own GitHub repository, [fork it](https://github.com/usenullish/document-templates/fork) first.
 
 1. Clone the repository and install the dependencies:
 
 ```sh
-git clone https://github.com/usenullish/templates.git
+git clone https://github.com/usenullish/document-templates.git
 cd templates
 npm install
 ```

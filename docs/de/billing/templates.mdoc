@@ -5,16 +5,16 @@ description: Gestalte Rechnungen, die zu dir passen, mit einer KI oder von Hand.
 
 nullish bringt eine schlichte Standardvorlage auf Englisch, Deutsch, Französisch und Italienisch mit. Sollen deine Rechnungen nach dir aussehen, gestalte deine eigene: Die ganze Seite gehört dir, nicht bloss Logo und eine Textzeile.
 
-Vorlagen baust du mit dem Projekt [nullish templates](https://github.com/usenullish/templates). Es zeigt deine Rechnung live mit Beispieldaten, so siehst du jede Änderung sofort. Die Arbeit kann eine KI für dich erledigen, oder du legst selbst Hand an.
+Vorlagen baust du mit dem Projekt [nullish templates](https://github.com/usenullish/document-templates). Es zeigt deine Rechnung live mit Beispieldaten, so siehst du jede Änderung sofort. Die Arbeit kann eine KI für dich erledigen, oder du legst selbst Hand an.
 
 ## Das Projekt holen
 
 {% steps %}
 
-1. Willst du deine Vorlagen in einem eigenen Repository haben, forke [usenullish/templates](https://github.com/usenullish/templates) auf GitHub. Dann klone es:
+1. Willst du deine Vorlagen in einem eigenen Repository haben, forke [usenullish/document-templates](https://github.com/usenullish/document-templates) auf GitHub. Dann klone es:
 
    ```sh
-   git clone https://github.com/usenullish/templates.git
+   git clone https://github.com/usenullish/document-templates.git
    cd templates
    npm install
    ```
@@ -44,7 +44,7 @@ Die Rechnungsvorlage liegt unter `src/templates/invoices/`:
 - `Invoice.astro` ist das Layout: was auf der Seite steht, und wo.
 - `i18n.json` enthält die Texte auf Englisch, Französisch, Deutsch und Italienisch.
 
-Gestalte sie mit normalem CSS oder Tailwind-Klassen. Grössen gibst du in Millimetern an, wie auf Papier. Alle Rechnungsdaten und die Vorlagensyntax findest du im [README des Projekts](https://github.com/usenullish/templates#readme).
+Gestalte sie mit normalem CSS oder Tailwind-Klassen. Grössen gibst du in Millimetern an, wie auf Papier. Alle Rechnungsdaten und die Vorlagensyntax findest du im [README des Projekts](https://github.com/usenullish/document-templates#readme).
 
 {% aside %}
 nullish speichert nur das HTML, die Vorlage kann also nichts von aussen nachladen. Bette dein Logo
