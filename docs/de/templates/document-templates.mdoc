@@ -1,11 +1,11 @@
 ---
-title: Rechnungsvorlagen
-description: Gestalte Rechnungen, die zu dir passen, mit einer KI oder von Hand.
+title: Dokumentvorlagen
+description: Gestalte deine Dokumente, mit einer KI oder von Hand.
 ---
 
-nullish bringt eine schlichte Standardvorlage auf Englisch, Deutsch, Französisch und Italienisch mit. Sollen deine Rechnungen nach dir aussehen, gestalte deine eigene: Die ganze Seite gehört dir, nicht bloss Logo und eine Textzeile.
+nullish bringt schlichte Standardvorlagen auf Englisch, Deutsch, Französisch und Italienisch mit. Sollen deine Dokumente nach dir aussehen, gestalte deine eigenen: Die ganze Seite gehört dir, nicht bloss Logo und eine Textzeile.
 
-Vorlagen baust du mit dem Projekt [nullish templates](https://github.com/usenullish/document-templates). Es zeigt deine Rechnung live mit Beispieldaten, so siehst du jede Änderung sofort. Die Arbeit kann eine KI für dich erledigen, oder du legst selbst Hand an.
+Vorlagen baust du mit dem Projekt [nullish document templates](https://github.com/usenullish/document-templates). Es zeigt deine Dokumente live mit Beispieldaten, so siehst du jede Änderung sofort. Die Arbeit kann eine KI für dich erledigen, oder du legst selbst Hand an.
 
 ## Das Projekt holen
 
@@ -15,7 +15,7 @@ Vorlagen baust du mit dem Projekt [nullish templates](https://github.com/usenull
 
    ```sh
    git clone https://github.com/usenullish/document-templates.git
-   cd templates
+   cd document-templates
    npm install
    ```
 
@@ -35,16 +35,16 @@ Vorlagen baust du mit dem Projekt [nullish templates](https://github.com/usenull
 - «Setze unsere Adresse in die Fusszeile und die Bankangaben neben die Totale.»
 - «Mach es ähnlich wie dieses PDF» (mit einer alten Rechnung im Anhang).
 
-Das Projekt beschreibt alle Rechnungsdaten, der Assistent weiss also, womit er arbeiten kann. Lass die Vorschau daneben offen und feile weiter, bis es passt.
+Das Projekt beschreibt die Daten jedes Dokuments, der Assistent weiss also, womit er arbeiten kann. Lass die Vorschau daneben offen und feile weiter, bis es passt.
 
 ## Oder selbst bearbeiten
 
-Die Rechnungsvorlage liegt unter `src/templates/invoices/`:
+Jedes Dokument hat seinen eigenen Ordner in `src/templates/`. Für Rechnungen ist es `src/templates/invoices/`:
 
 - `Invoice.astro` ist das Layout: was auf der Seite steht, und wo.
 - `i18n.json` enthält die Texte auf Englisch, Französisch, Deutsch und Italienisch.
 
-Gestalte sie mit normalem CSS oder Tailwind-Klassen. Grössen gibst du in Millimetern an, wie auf Papier. Alle Rechnungsdaten und die Vorlagensyntax findest du im [README des Projekts](https://github.com/usenullish/document-templates#readme).
+Gestalte sie mit normalem CSS oder Tailwind-Klassen. Grössen gibst du in Millimetern an, wie auf Papier. Die Daten jedes Dokuments und die Vorlagensyntax findest du im [README des Projekts](https://github.com/usenullish/document-templates#readme).
 
 {% aside %}
 nullish speichert nur das HTML, die Vorlage kann also nichts von aussen nachladen. Bette dein Logo
@@ -55,21 +55,21 @@ als SVG oder `data:`-URI ein, und genauso eine eigene Schrift.
 
 {% steps %}
 
-1. Baue die Vorlage:
+1. Baue die Vorlagen:
 
    ```sh
    npm run build
    ```
 
-   Du bekommst pro Sprache eine Datei in `templates/invoices/`: `en.html`, `fr.html`, `de.html` und `it.html`.
+   Du bekommst pro Dokument eine Datei je Sprache, z. B. in `templates/invoices/`: `en.html`, `fr.html`, `de.html` und `it.html`.
 
 2. Geh in nullish zu **Einstellungen → Rechnungsstellung → Dokumentvorlagen** und erstelle eine Vorlage. Gib ihr einen **Name**.
 
-3. Wähle für jede Sprache, in der du Rechnungen stellst, **Inhalt hinzufügen**: **Sprache** wählen und die passende Datei hochladen, z. B. `fr.html` für Französisch.
+3. Wähle für jede Sprache, die du brauchst, **Inhalt hinzufügen**: **Sprache** wählen und die passende Datei hochladen, z. B. `fr.html` für Französisch.
 
 {% /steps %}
 
-Beim Generieren eines Rechnungs-PDF wählst du deine Vorlage unter **Dokumentvorlage**. Du kannst mehrere haben, etwa eine pro Marke.
+Beim Generieren eines PDF, etwa einer Rechnung, wählst du deine Vorlage unter **Dokumentvorlage**. Du kannst mehrere haben, etwa eine pro Marke.
 
 {% aside type="tip" %}
 Ein Tippfehler bei den Daten in der Vorlage, und das PDF schlägt fehl. Du merkst es also sofort. Prüf alles in der

@@ -1,11 +1,11 @@
 ---
-title: Invoice templates
-description: Design invoices that look like you, with an AI or by hand.
+title: Document templates
+description: Design your documents, with an AI or by hand.
 ---
 
-nullish comes with a clean default template in English, German, French and Italian. When you want invoices that look like you, design your own: the whole page is yours, not just a logo and a line of text.
+nullish comes with clean default templates in English, German, French and Italian. When you want documents that look like you, design your own: the whole page is yours, not just a logo and a line of text.
 
-Templates are made with the [nullish templates](https://github.com/usenullish/document-templates) project. It shows a live preview of your invoice with sample data, so you see every change right away. You can let an AI do the work or edit the template yourself.
+Templates are made with the [nullish document templates](https://github.com/usenullish/document-templates) project. It shows a live preview of your documents with sample data, so you see every change right away. You can let an AI do the work or edit the templates yourself.
 
 ## Get the project
 
@@ -15,7 +15,7 @@ Templates are made with the [nullish templates](https://github.com/usenullish/do
 
    ```sh
    git clone https://github.com/usenullish/document-templates.git
-   cd templates
+   cd document-templates
    npm install
    ```
 
@@ -35,16 +35,16 @@ Open the project in a coding assistant such as Claude Code, Cursor or Copilot, a
 - "Put our address in the footer and the bank details next to the totals."
 - "Make it look more like this PDF" (with an old invoice attached).
 
-The project describes every piece of invoice data, so the assistant knows what it can use. Keep the preview open next to it and ask for adjustments until it looks right.
+The project describes the data of every document, so the assistant knows what it can use. Keep the preview open next to it and ask for adjustments until it looks right.
 
 ## Or edit it yourself
 
-The invoice template lives in `src/templates/invoices/`:
+Each document has its own folder in `src/templates/`. For invoices, it's `src/templates/invoices/`:
 
 - `Invoice.astro` is the layout: what appears on the page, and where.
 - `i18n.json` holds the texts in English, French, German and Italian.
 
-Style it with plain CSS or Tailwind classes. Sizes are in millimeters, like on paper. The [project's README](https://github.com/usenullish/document-templates#readme) lists all the invoice data and the template syntax.
+Style it with plain CSS or Tailwind classes. Sizes are in millimeters, like on paper. The [project's README](https://github.com/usenullish/document-templates#readme) lists the data of every document and the template syntax.
 
 {% aside %}
 nullish only stores the HTML, so the template can't load anything from elsewhere. Embed your logo
@@ -55,21 +55,21 @@ as SVG or as a `data:` URI, and do the same for a custom font.
 
 {% steps %}
 
-1. Build the template:
+1. Build the templates:
 
    ```sh
    npm run build
    ```
 
-   You get one file per language in `templates/invoices/`: `en.html`, `fr.html`, `de.html` and `it.html`.
+   You get one file per language for each document, e.g. in `templates/invoices/`: `en.html`, `fr.html`, `de.html` and `it.html`.
 
 2. In nullish, go to **Settings → Billing → Document templates** and create a template. Give it a **Name**.
 
-3. Choose **Add content** for each language you invoice in: pick the **Language** and upload the matching file, e.g. `fr.html` for French.
+3. Choose **Add content** for each language you need: pick the **Language** and upload the matching file, e.g. `fr.html` for French.
 
 {% /steps %}
 
-When you generate an invoice PDF, pick your template under **Document template**. You can keep several, for example one per brand.
+When you generate a PDF, for example an invoice, pick your template under **Document template**. You can keep several, for example one per brand.
 
 {% aside type="tip" %}
 A typo in the data a template uses makes the PDF fail, so you'll notice right away. Check it in

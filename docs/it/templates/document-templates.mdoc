@@ -1,11 +1,11 @@
 ---
-title: Modelli di fattura
-description: Fatture che ti somigliano, disegnate con l'IA o a mano.
+title: Modelli di documento
+description: Disegna i tuoi documenti, con l'IA o a mano.
 ---
 
-nullish ha già un modello predefinito, sobrio, in inglese, tedesco, francese e italiano. Se vuoi fatture che ti somiglino, disegnane uno tuo: la pagina è tutta tua, non solo un logo e una riga di testo.
+nullish ha già dei modelli predefiniti, sobri, in inglese, tedesco, francese e italiano. Se vuoi documenti che ti somiglino, disegnane di tuoi: la pagina è tutta tua, non solo un logo e una riga di testo.
 
-I modelli nascono nel progetto [nullish templates](https://github.com/usenullish/document-templates), che mostra la tua fattura in anteprima live con dati di esempio: ogni modifica la vedi subito. Il lavoro puoi lasciarlo all'IA o farlo tu.
+I modelli nascono nel progetto [nullish document templates](https://github.com/usenullish/document-templates), che mostra i tuoi documenti in anteprima live con dati di esempio: ogni modifica la vedi subito. Il lavoro puoi lasciarlo all'IA o farlo tu.
 
 ## Scaricare il progetto
 
@@ -15,7 +15,7 @@ I modelli nascono nel progetto [nullish templates](https://github.com/usenullish
 
    ```sh
    git clone https://github.com/usenullish/document-templates.git
-   cd templates
+   cd document-templates
    npm install
    ```
 
@@ -35,16 +35,16 @@ Apri il progetto in un assistente di programmazione come Claude Code, Cursor o C
 - "Metti il nostro indirizzo nel piè di pagina e le coordinate bancarie accanto ai totali."
 - "Fallo somigliare di più a questo PDF" (con una vecchia fattura allegata).
 
-Il progetto descrive ogni dato della fattura, quindi l'assistente sa cosa ha a disposizione. Tieni l'anteprima aperta lì accanto e chiedi ritocchi finché il risultato non ti piace.
+Il progetto descrive i dati di ogni documento, quindi l'assistente sa cosa ha a disposizione. Tieni l'anteprima aperta lì accanto e chiedi ritocchi finché il risultato non ti piace.
 
 ## Oppure fallo tu
 
-Il modello di fattura sta in `src/templates/invoices/`:
+Ogni documento ha la sua cartella in `src/templates/`. Per le fatture è `src/templates/invoices/`:
 
 - `Invoice.astro` è il layout: cosa appare sulla pagina, e dove.
 - `i18n.json` contiene i testi in inglese, francese, tedesco e italiano.
 
-Lo stile lo definisci con CSS semplice o con le classi Tailwind. Le misure sono in millimetri, come sulla carta. Nel [README del progetto](https://github.com/usenullish/document-templates#readme) trovi tutti i dati della fattura e la sintassi dei modelli.
+Lo stile lo definisci con CSS semplice o con le classi Tailwind. Le misure sono in millimetri, come sulla carta. Nel [README del progetto](https://github.com/usenullish/document-templates#readme) trovi i dati di ogni documento e la sintassi dei modelli.
 
 {% aside %}
 nullish salva solo l'HTML, quindi il modello non può caricare niente da fuori. Incorpora il logo
@@ -55,21 +55,21 @@ come SVG o come URI `data:`, e lo stesso vale per un font personalizzato.
 
 {% steps %}
 
-1. Compila il modello:
+1. Compila i modelli:
 
    ```sh
    npm run build
    ```
 
-   Ti ritrovi un file per lingua in `templates/invoices/`: `en.html`, `fr.html`, `de.html` e `it.html`.
+   Ti ritrovi un file per lingua per ogni documento, per esempio in `templates/invoices/`: `en.html`, `fr.html`, `de.html` e `it.html`.
 
 2. In nullish vai su **Impostazioni → Fatturazione → Modelli di documento** e crea un modello. Dagli un **Nome**.
 
-3. Scegli **Aggiungi un contenuto** per ogni lingua in cui fatturi: seleziona la **Lingua** e carica il file corrispondente, per esempio `it.html` per l'italiano.
+3. Scegli **Aggiungi un contenuto** per ogni lingua che ti serve: seleziona la **Lingua** e carica il file corrispondente, per esempio `it.html` per l'italiano.
 
 {% /steps %}
 
-Quando generi il PDF di una fattura, scegli il tuo modello sotto **Modello di documento**. Puoi averne più di uno, per esempio uno per marchio.
+Quando generi un PDF, per esempio una fattura, scegli il tuo modello sotto **Modello di documento**. Puoi averne più di uno, per esempio uno per marchio.
 
 {% aside type="tip" %}
 Basta un errore di battitura nei dati usati dal modello e il PDF non si genera: così te ne accorgi subito. Controlla
