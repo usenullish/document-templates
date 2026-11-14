@@ -14,7 +14,7 @@ A template is a single HTML file. nullish fills it with the data of a document a
 ```sh
 git clone https://github.com/usenullish/document-templates.git
 cd templates
-npm install
+npm ci
 ```
 
 2. Start the preview:
